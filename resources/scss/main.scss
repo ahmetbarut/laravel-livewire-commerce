@@ -1,0 +1,239 @@
+$red: #ea0000;
+$green: #00ab00;
+$blue: #0000ab;
+$yellow: #abab00;
+$orange: #ab7000;
+$purple: #7000ab;
+$pink: #ab007b;
+$brown: #7b00ab;
+$gray: #7b7b7b;
+$black: #000000;
+$white: #ffffff;
+
+header {
+    .header-menu {
+        a {
+            color: #141517;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+
+            &:hover {
+                color: #f31818;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .icons {
+        a {
+            i {
+                font-size: 20px;
+                color: #000;
+                font-weight: 200 !important;
+            }
+        }
+    }
+
+    .logo {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    #cart{
+        position: absolute;
+        top: 98px;
+        width: 300px;
+        right: 0;
+        z-index: 1;
+        background: white;
+        padding: 20px;
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+}
+
+main {
+    .slider-area {
+        .carousel-inner {
+            img {
+                width: 100%;
+                height: 100%;
+                object-position: 50% 50%;
+                object-fit: cover;
+            }
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-image: none;
+        }
+
+        .carousel-inner {
+            width: 100%;
+            max-height: 500px !important;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: .75rem 1.25rem;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: .15rem;
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #f57171;
+                z-index: -2;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                background-color: darken(#f83d3d, 15%);
+                transition: all .3s;
+                z-index: -1;
+            }
+
+            &:hover {
+                color: #fff;
+
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+#search-product {
+
+    > div {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        z-index: 2;
+        color: #fff;
+
+        > div {
+            height: 200px;
+            opacity: 1;
+        }
+    }
+
+    .form-control {
+        outline: none;
+        border: none !important;
+        border-bottom: 1px solid #625858 !important;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+        background-color: black;
+        border-bottom: 1px solid;
+        border-radius: 0;
+
+        &::placeholder {
+            color: #625858 !important;
+            font-size: 20px !important;
+            font-weight: bold;
+        }
+
+        color: #a89b9b !important;
+        font-size: 20px !important;
+        font-weight: bold;
+    }
+    #search-result{
+        ul {
+            height: 300px;
+            overflow-y: scroll;
+
+            li{
+                border-radius: unset;
+                &:hover{
+                    background-color: #d9d0d0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+#latest-product {
+    .card {
+        .card-body {
+            position: relative;
+        }
+
+        .detail {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            color: #fff;
+            left: 0;
+            top: 0;
+            z-index: 1;
+
+            > div {
+                height: 100%;
+            }
+        }
+
+        .name {
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d30707;
+        }
+    }
+
+    .col-4 {
+        padding: 15px;
+    }
+}
+
+.info {
+    div {
+        background-color: $red;
+    }
+}
+footer{
+    padding: 20px;
+    font-size: 15px;
+    font-weight:200;
+    text-align: center;
+    .nav {
+        .a{
+            color: #000 !important;
+        }
+    }
+}
+
+.rating{
+    span{
+        color: #a99e9e;
+        font-size: 20px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .active{
+        color: #ffc107 !important;
+    }
+}
